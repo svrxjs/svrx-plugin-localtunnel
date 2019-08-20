@@ -55,7 +55,7 @@ Proxy to this hostname instead of localhost
 
 localhost is **optional**
 
-### **host \[Object]:**
+### **host \[String]:**
 
 specify host if you want to use custom [localtunnel/server](https://github.com/localtunnel/server) 
 
