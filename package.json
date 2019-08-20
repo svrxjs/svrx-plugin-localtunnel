@@ -1,0 +1,21 @@
+{
+  "name": "svrx-plugin-localtunnel",
+  "version": "0.0.1",
+  "description": "localtunnel plugin for server-x",
+  "main": "index.js",
+  "scripts": {},
+  "engines": {
+    "svrx": "~0.0"
+  },
+  "keywords": [
+    "svrx",
+    "svrx-plugin",
+    "localtunnel"
+  ],
+  "author": "leeluolee",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "localtunnel": "^1.9.2"
+  }
+}
