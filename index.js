@@ -25,6 +25,7 @@ module.exports = {
       events.on('ready', () => {
         const stopSpin = logger.spin('connecting to localtunnel...');
         const port = config.get('$.port');
+        const { chalk } = logger;
         tunnel = localtunnel(
           port,
           {
@@ -38,7 +39,9 @@ module.exports = {
               logger.error(
                 `localtunnel setup failed, beacuse {err.stack || err.message}`
               );
-            logger.notify(`url is available on ${tunnel.url}`);
+            logger.notify(
+              `url is available at ${chalk.underline.blue(tunnel.url)}`
+            );
           }
         );
         tunnel.on('error', err => {
