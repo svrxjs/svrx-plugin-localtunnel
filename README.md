@@ -1,6 +1,6 @@
 # svrx-plugin-localtunnel
 
-[localtunnel client](https://github.com/localtunnel/localtunnel) plugin for [svrx](https://github.com/x-orpheus/svrx)
+[svrx](https://github.com/x-orpheus/svrx) plugin for [localtunnel](https://github.com/localtunnel/localtunnel) 
 
 This plugin is used to expose your local server to `localtunnel.me`
 
@@ -8,16 +8,16 @@ This plugin is used to expose your local server to `localtunnel.me`
 
 > **please confirm you have [installed svrx](https://github.com/x-orpheus/svrx) already**
 
-### cli
+### Via CLI
 
 ```bash
-svrx -p localtunnel?subdomain=svrx
+svrx -p "localtunnel"
 ```
 
-### manual
+### Via API
 
 ```js
-const svrx = require('svrx');
+const svrx = require('@svrx/svrx');
 
 svrx({ 
     plugins: ['localtunnel'] 
@@ -25,7 +25,7 @@ svrx({
 
 ```
 
-**with options**
+**With options**
 
 ```js
 
@@ -39,7 +39,7 @@ svrx({
 }).start();
 ```
 
-> example above will init https://svrx.localtunnel.me for you
+> Example above will prepare https://svrx.localtunnel.me for you
 
 ## Options
 
@@ -47,7 +47,7 @@ svrx({
 
 A string value requesting a specific subdomain on the proxy server
 
-subdomain is **optional**, localtunnel will auto create a random domain for you.
+Subdomain is **optional**, localtunnel will auto create a random domain for you.
 
 ### **localhost \[String]:**
 
@@ -59,7 +59,7 @@ localhost is **optional**
 
 specify host if you want to use custom [localtunnel/server](https://github.com/localtunnel/server) 
 
-deafult is `https://localtunnel.me`
+Deafult is `https://localtunnel.me`
 
 
 
