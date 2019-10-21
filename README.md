@@ -57,9 +57,13 @@ localhost is **optional**
 
 ### **host \[String]:**
 
-specify host if you want to use custom [localtunnel/server](https://github.com/localtunnel/server) 
+specify host if you want to use custom [localtunnel/server](https://github.com/localtunnel/server)  ， or [Deploy localtunnel server with docker-compose](https://github.com/x-orpheus/localtunnel-server)
+
 
 Deafult is `https://localtunnel.me`
+
+
+
 
 
 
