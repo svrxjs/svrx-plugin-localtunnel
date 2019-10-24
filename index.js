@@ -35,17 +35,22 @@ module.exports = {
           },
           (err, tunnel) => {
             stopSpin();
-            if (err)
+            if (err) {
               logger.error(
                 `localtunnel setup failed, beacuse {err.stack || err.message}`
               );
+              events.emit('localtunnel:error', err.message);
+            }
             logger.notify(
               `url is available at ${chalk.underline.blue(tunnel.url)}`
             );
+            events.emit('localtunnel:ready', tunnel);
           }
         );
         tunnel.on('error', err => {
+          stopSpin();
           logger.error(err.message);
+          events.emit('localtunnel:error', err.message);
         });
       });
       // onCreate
